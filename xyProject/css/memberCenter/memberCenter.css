@@ -1,0 +1,90 @@
+body{
+	background: #F2F2F2;
+}
+.fp{
+	width: 100%;
+	background: #00846C;
+	height: 160px;
+	padding-top: 20px;
+}
+.fp img:first-child{
+	display: block;
+	margin: auto;
+	width: 70px;
+}
+.fp .acc_money,
+.fp .acc_id{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	color: white;
+	font-size: 18px;
+}
+.fp .acc_money{
+	margin-top: 15px;
+	color: #fefb00;
+}
+.menu{
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	text-align: center;
+	background: white;
+}
+.menu .menu_i{
+	border-right: 1px solid #F1F1F1;
+}
+.menu .menu_i img{
+	width: 32px;
+	margin-right: 10px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+.mc_item{
+	margin-top: 10px;
+}
+.mc_item .mc_item_i{
+	background: white;
+	margin-bottom: 3px;
+	height: 30px;
+	line-height: 30px
+}
+.mc_item .mc_item_i>img:first-child{
+	width: 23px;
+	margin-left: 15px;
+	margin-top: 4px;
+}
+.mc_item .mc_item_i .mc_text{
+	font-size: 14px;
+	margin-left: 15px;
+	vertical-align: top;
+}
+.mc_item .mc_item_i .more{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+	font-size: 12px;
+	position: relative;
+	padding-right: 20px;
+}
+.mc_item .mc_item_i .more img{
+	position: absolute;
+	z-index: 1;
+	top: 8px;
+	right: 0;
+	width: 8px;
+}
+.login_out{
+	display: block;
+	width: 80%;
+	margin: auto;
+	margin-top:20px;
+	color: white;
+	height: 34px;
+	line-height: 34px;
+	background: #00846C;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 40px;
+	border-radius: 5px;
+}

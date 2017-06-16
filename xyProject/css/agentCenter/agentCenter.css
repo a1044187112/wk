@@ -1,0 +1,41 @@
+.item{
+	height: 40px;
+	border-bottom: 2px solid #F1F1F1;
+	font-size: 16px;
+	position: relative;
+	line-height: 40px;
+}
+.item>img:first-child{
+	width: 30px;
+	height: 30px;
+	margin-left: 15px;
+	margin-top: 3px;
+	margin-right: 5px;
+}
+.item .item_text{
+	margin-top: 5px !important;
+	display: inline-block;
+	position: absolute;
+	top: -5px;
+	left: 57px;
+	z-index: 10;
+}
+.item .more{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+	margin-right: 15px;
+	font-size: 14px;
+	color: #828282;
+	position: relative;
+	padding-right: 20px;
+}
+.item .more img{
+	margin-left:10px;
+	width: 8px;
+	position: absolute;
+	z-index: 10;
+	top: 14px;
+	right: 0;
+}

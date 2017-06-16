@@ -1,0 +1,79 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+.footer{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-align: center;
+	border-top: 1px solid #c1c1c1;
+}
+.footer .footer_i img{
+	width: 25%;
+	margin: auto;
+}
+.footer .footer_i .footer_text{
+	color: #828282;
+	font-size: 3.4vmin;
+}
+.footer .footer_i.active .footer_text{
+	color: #00846c;
+}
+.footer_show{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: white;
+}
+
+
+.popus_bg{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.3);
+}
+.popus{
+	position: fixed;
+	z-index: 101;
+	background: white;
+	top: 220px;
+	width: 260px;
+	left: 50px;
+	text-align: center;
+	border-radius: 10px;
+}
+.popus .popus_text{
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 3px solid #f1f1f1;
+}
+.popus .popus_btn{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border:none;
+	background: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	outline: none;
+}
+.popus .popus_btn:active{
+	background: #F2F2F2;
+	color: #00846C;
+}
+.title{
+	color: white;
+	width: 100%;
+	background: #00846c;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: 600;
+}

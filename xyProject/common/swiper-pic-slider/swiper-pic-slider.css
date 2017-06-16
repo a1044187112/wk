@@ -1,0 +1,30 @@
+.swiper_pic_slider {
+	height: 100%;
+	width: 100%;
+
+}
+
+.swiper_pic_slider .swiper-container{
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+
+
+.swiper_pic_slider .swiper-container .swiper-wrapper{
+	height: 100%;
+	width: 100%;
+	
+}
+
+.swiper_pic_slider .swiper-container .swiper-wrapper .slide_item{
+	height: 100%;
+	width: 100%;
+	font-size: 0px;
+}
+
+.swiper_pic_slider .swiper-container .swiper-wrapper .slide_item img{
+	width: 100%;
+}

@@ -1,0 +1,103 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	background: url(../../img/login/bg.png) no-repeat;
+	
+}
+.weclome{
+	margin-top: 50px;
+	font-size: 48px;
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+.div_input:nth-child(2){
+	margin-top: 60px;
+}
+.div_input{
+	width: 80%;
+	margin: auto;
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	border-bottom: 1px solid #fff;
+	margin-top: 15px;
+	
+}
+
+.div_input img{
+	width: 25px;
+	margin-left: 10px;
+	/*vertical-align: middle;*/
+	margin-bottom: -10px;
+}
+.div_input input{
+	width: 82%;
+	padding-left: 10px;
+	border:none;
+	height: 25px;
+	line-height: 25px;
+	background: rgba(255,255,255,0);
+	outline: none;
+	color: white;
+}
+.div_input_i{
+	width: 80%;
+	margin: auto;
+	margin-top: 25px;
+	color: white;
+	font-size: 0.8rem;
+}
+.div_input_i .div_span_icon{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: relative;
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-top: -4px;
+}
+.div_input_i .div_span_icon span{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+.div_input_i .faile_pwd{
+	float: right;
+}
+.login{
+	display: block;
+	width: 80%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border:none;
+	margin: auto;
+	margin-top: 70px;
+	border-radius: 5px;
+	background: #d7e5e2;
+	color: #00846c;
+}
+
+.more{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 30px;
+	color: white;
+	font-size: 14px;
+}
+.more_m{
+	display: none;
+}

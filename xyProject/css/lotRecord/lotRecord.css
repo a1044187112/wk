@@ -1,0 +1,47 @@
+.lot_class{
+	height: 50px;
+	text-align: center;
+	border-bottom: 2px solid #F1F1F1;
+}
+.lot_class .lot_c_i:first-child{
+	width: 35%;
+}
+.lot_class .lot_c_i:nth-child(2){
+	width: 65%;
+}
+.lot_class .lot_c_i:first-child .lot_c_text:nth-child(1){
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 7px;
+}
+.lot_class .lot_c_i:first-child .lot_c_issue:nth-child(2){
+	font-size: 12px;
+	margin-top: 4px;
+	color: #828282;
+}
+.lot_class .lot_c_i:nth-child(2) .qiu_item{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 50%;
+	position: relative;
+	margin-top: 7px;
+	margin-left: 1px;
+}
+.lot_class .lot_c_i:nth-child(2) .qiu_item img{
+	width: 100%;
+}
+.lot_class .lot_c_i:nth-child(2) .qiu_item .qiu_item_text{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	font-weight: 600;
+	color: white;
+	z-index: 50;
+	left: 0;
+	font-size: 16px;
+	line-height: 35px;
+}
