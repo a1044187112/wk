@@ -74,6 +74,31 @@
 	text-align: center;
 	height: 40px;
 	line-height: 40px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 600;
+	position: relative;
+}
+.title .return_img{
+	position: absolute;
+	top: 12px;
+	left: 15px;
+	width: 11px;
+}
+.title .return_text{
+	position: absolute;
+	left: 30px;
+	font-size: 14px;
+	color: white;
+}
+.title .menu_more{
+	width: 16px;
+	vertical-align: middle;
+	margin-top: -2px;
+	margin-left: 2px;
+}
+.title .menu_help{
+	width: 18px;
+	position: absolute;
+	right: 10px;
+	margin-top: 10px;
 }
