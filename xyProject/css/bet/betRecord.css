@@ -1,0 +1,117 @@
+body{
+	background: #F1F1F1;
+}
+.r_num{
+	width: 95%;
+	text-align: right;
+	height: 44px;
+	line-height: 44px;
+	font-size: 16px;
+}
+.r_num .r_num_n{
+	color: #00846C;
+	margin: 0 5px;
+}
+.r{
+	width: 100%;
+}
+.r .r_item{
+	width: 90%;
+	margin: auto;
+	background: white;
+	border-radius: 10px;
+	height: 50px;
+	border: 1px solid #C6C6C6;
+	margin-top: 10px;
+}
+.r .r_item:first-child{
+	margin-top: 0;
+}
+.r .r_item .r_item_a{
+	width: 45%;
+	text-align: center;
+	font-size: 12px;
+}
+.r .r_item .r_item_a .r_item_a_t{
+	font-size: 14px;
+	margin-top: 8px;
+}
+.r .r_item .r_item_a .r_item_a_issue{
+	margin-top: 2px;
+}
+
+.r .r_item .r_item_b{
+	width: 45%;
+	font-size: 12px;
+	text-align: right;
+}
+.r .r_item .r_item_b .r_item_b_1{
+	margin-top: 8px;
+	font-size: 14px;
+}
+.r .r_item .r_item_b .r_item_b_1 .r_state{
+	color: #f85959;
+}
+.r .r_item .r_item_c{
+	width: 10%;
+}
+.r .r_item .r_item_c img{
+	width: 10px;
+	margin-top: 15px;
+	margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+
+.menu{
+	text-align: center;
+	border-top: 1px solid #c6c6c6;
+	background: white;
+	padding-top: 4px;
+}
+
+.menu .menu_i{
+	height: 44px;
+}
+.menu .menu_i img{
+	display: block;
+	margin: auto;
+	width: 24px;
+}
+.menu .menu_i .menu_text{
+	font-size: 12px;
+	margin-top: 3px;
+	color: #000;
+}
+.menu_show{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.menu .menu_i:nth-child(4){
+	position: relative;
+	background: url(../../img/bet/lotBet/qrtz.png) no-repeat;
+	height: 48px;
+	margin-top: -4px;
+}
+.menu .menu_i:nth-child(4) .menu_text{
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	z-index: 2;
+	display: inline-block;
+	width: 100%;
+	left: 0;
+	height: 48px;
+	line-height: 44px;
+	font-size: 14px;
+}
+.menu .menu_i.active .menu_text{
+	color: #00846c;
+}

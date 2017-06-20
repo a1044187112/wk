@@ -19,6 +19,7 @@
 	top: -5px;
 	left: 57px;
 	z-index: 10;
+	color: black;
 }
 .item .more{
 	display: inline-block;

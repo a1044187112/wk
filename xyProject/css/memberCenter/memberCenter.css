@@ -33,6 +33,7 @@ body{
 }
 .menu .menu_i{
 	border-right: 1px solid #F1F1F1;
+	color: black;
 }
 .menu .menu_i img{
 	width: 32px;
@@ -47,7 +48,9 @@ body{
 	background: white;
 	margin-bottom: 3px;
 	height: 30px;
-	line-height: 30px
+	line-height: 30px;
+	display: block;
+	color: black;
 }
 .mc_item .mc_item_i>img:first-child{
 	width: 23px;
@@ -88,3 +91,5 @@ body{
 	margin-bottom: 40px;
 	border-radius: 5px;
 }
+
+

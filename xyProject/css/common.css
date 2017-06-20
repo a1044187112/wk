@@ -102,3 +102,60 @@
 	right: 10px;
 	margin-top: 10px;
 }
+.title .chase{
+	position: absolute;
+	right: 10px;
+	font-weight: 400;
+}
+.title .chase img{
+	width: 17px;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+input{
+	border: none;
+	border: 1px solid #C6C6C6;
+}
+#more_sel{
+	width: 40%;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 5px;
+	border: 1px solid #C6C6C6;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 5px;
+	margin-left: 5%;
+	position: relative;
+}
+.more_sel_icon{
+	position: absolute;
+	right: 8px;
+	top: 10px;
+	z-index: 100;
+	width: 12px;
+}
+.more_s{
+	position: absolute;
+	width: 100%;
+	top: 24px;
+	left: -1px;
+	background: white;
+	z-index: 99;
+	border: 1px solid #C6C6C6;
+	background: #F1F1F1;
+}
+.more_s .more_s_i{
+	border-bottom: 1px solid #C6C6C6;
+}
+.more_s .more_s_i span{
+	margin-left: 5px;
+}
+.more_s .more_s_i:hover{
+	background: #C6C6C6;
+}
+.more_sel_val{
+	display: inline-block;
+	width: 100%;
+	margin-left: -1px;
+}

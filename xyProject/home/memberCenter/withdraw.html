@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../common/jquery/jquery.mobile-1.4.5.min.css" />
+		<script type="text/javascript" src="../../common/jquery/jquery-1.11.3.min.js" ></script>
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/memberCenter/recharge.css" />
+		<title>开奖记录</title>
+	</head>
+	<body>
+		<div class="title">
+			<img class="return_img" src="../../img/lotRecord/return_btn.png"/>
+			<span class="return_text">返回</span>提现
+		</div>
+		
+		<div data-role="page" id="pageone" style="padding-top: 20px;" >
+			
+			<div class="team_menu ui-grid-a">
+				<div class="t_m_i ui-block-a active">提现</div>
+				<div class="t_m_i ui-block-b">提现记录</div>
+			</div>
+			
+			<div class="wd_more">
+				<ul class="wd_l">
+					<li class="wd_l_i"><span>可提现金额：</span><span>￥100.20</span></li>
+					<li class="wd_l_i"><span>收款银行卡：</span><select><option>工商银行|卡号后四位0236</option></select></li>
+					<li class="wd_l_i"><span>提现金额：</span><input type="text"/>
+						<div class="wd_remind">(最小提现金额 <span>100 RMB</span>,最大提现金额<span>4999 RMB</span>)</div>
+					</li>
+					<li class="wd_l_i"><span>资金密码：</span><input type="password"/></li>
+				</ul>
+				<div class="btn_submit">申请提现</div>
+				<div class="remind"><span></span>每天限提现<span>6</span>次，今天您已成功体现<span>0</span>次</div>
+				<div class="remind"><span></span>全天<span>24</span>小时提现</div>
+				<div class="remind"><span></span>新绑定的银行卡超过<span>6</span>小时才能提现</div>
+			</div>
+			
+			
+			
+			<div class="re_more">
+				<ul class="r_info">
+					<li class="r_info_i"><span class="r_key">开始时间：</span><input class="r_val" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">结束时间：</span><input class="r_val" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">充值编号：</span><input class="r_val" type="text"/></li>
+				</ul>
+				
+				<a href="withdrawInfo.html" class="submit">查询</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+body{
+	background: #F1F1F1;
+}
+.r_info{
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	text-align: left;
+}
+.r_info_i .r_i_i{
+	height: 36px;
+	border-top: 1px solid #C6C6C6;
+	line-height: 36px;
+	background: white;
+}
+.r_info_i .r_i_i span:nth-child(1){
+	margin-left: 15px;
+}
+.r_info_i .r_i_i span:nth-child(2){
+	float: right;
+	margin-right: 20px;
+}
+
+.menu{
+	text-align: center;
+	border-top: 1px solid #c6c6c6;
+	background: white;
+	padding-top: 4px;
+}
+
+.menu .menu_i{
+	height: 44px;
+}
+.menu .menu_i img{
+	display: block;
+	margin: auto;
+	width: 24px;
+}
+.menu .menu_i .menu_text{
+	font-size: 12px;
+	margin-top: 3px;
+	color: #000;
+}
+.menu_show{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.menu .menu_i.active .menu_text{
+	color: #00846c;
+}

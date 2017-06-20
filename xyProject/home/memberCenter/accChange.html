@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../../common/jquery/jquery.mobile-1.4.5.min.css" />
+		<script type="text/javascript" src="../../common/jquery/jquery-1.11.3.min.js"></script>
+		<link rel="stylesheet" href="../../css/common.css" />
+		<link rel="stylesheet" href="../../css/memberCenter/recharge.css" />
+		<link rel="stylesheet" href="../../common/date/date.css" />
+		<title>开奖记录</title>
+	</head>
+
+	<body>
+		<div class="title">
+			<img class="return_img" src="../../img/lotRecord/return_btn.png" />
+			<span class="return_text">返回</span>帐变
+		</div>
+
+		<div data-role="page" id="pageone" style="padding-top: 20px;">
+
+			<ul class="r_info" style="margin-top: 0;">
+				<li class="r_info_i"><span class="r_key">状态：</span><div id="more_sel">
+					<span class="more_sel_val">全部</span>
+					<img class="more_sel_icon" src="../../img/common/xiala_icon.png"/>
+					<ul class="more_s" style="display: none;">
+						<li class="more_s_i"><span>充值</span></li>
+						<li class="more_s_i"><span>投注</span></li>
+					</ul>
+				</div></li>
+				<li class="r_info_i"><span class="r_key">开始时间：</span><input id="date1" class="r_val" type="text" /></li>
+				<li class="r_info_i"><span class="r_key">结束时间：</span><input id="date2" class="r_val" type="text" /></li>
+				<li class="r_info_i"><span class="r_key">编号：</span><input class="r_val" type="text" /></li>
+				<li class="r_info_i"><span class="r_key">帐变编号：</span><input class="r_val" type="text" /></li>
+			</ul>
+
+			<a href="accChangeInfo.html" class="submit">查询</a>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="../../common/date/date.js" ></script>
+	<script type="text/javascript" src="../../common/common.js" ></script>
+	<script>
+		dateSelect.init();
+		
+	</script>
+
+</html>

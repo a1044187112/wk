@@ -32,7 +32,7 @@ body{
 .lot_menu .lot_menu_title{
 	height: 40px;
 	line-height: 40px;
-	font-size: 5vmin;
+	/*font-size: 5vmin;*/
 	color: #8C8C8C;
 	border-bottom: 2px solid #F2F2F2;
 	border-top: 2px solid #F2F2F2;

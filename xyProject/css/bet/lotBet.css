@@ -1,3 +1,91 @@
+.menu_type{
+	width: 100%;
+	position: absolute;
+	top: 40px;
+	height: 225px;
+	z-index: 5;
+	border-bottom: 1px solid #00846c;
+	background: white;
+}
+.menu_type .m_t_1{
+	width: 25%;
+	height: 220px;
+	border-right: 1px solid #00846C;
+	text-align: right;
+	overflow: scroll;
+	padding-bottom: 5px;
+}
+.menu_type .m_t_1 .m_t_1_i{
+	display: inline-block;
+	width: 80%;
+	text-align: center;
+	height: 27px;
+	line-height: 27px;
+	background: white;
+	border:1px solid #F1F1F1;
+	color: #00846c;
+	font-size: 14px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-top: 5px;
+	border-right: none;
+	
+}
+.menu_type .m_t_1 .m_t_1_i.active{
+	background: #00846C;
+	color: white;
+}
+.menu_type .m_t_2{
+	height: 225px;
+	width: 75%;
+	overflow: scroll;
+}
+.menu_type .m_t_2 .m_t_2_title{
+	margin-top: 14px;
+	color: #00846C;
+	margin-left: 10px;
+	border-bottom: 1px solid #F1F1F1;
+}
+.menu_type .m_t_2 .m_t_2_i{
+	display: inline-block;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+	border:1px solid #F1F1F1;
+	margin-left: 10px;
+	margin-top: 5px;
+	border-radius: 4px;
+	font-size: 14px;
+	color: #00846C;
+	padding: 0 15px;
+}
+.menu_type .m_t_2 .m_t_2_i.active{
+	background: #00846C;
+	color: white;
+}
+
+.play_help{
+	width: 100%;
+	position: absolute;
+	top: 40px;
+	z-index: 6;
+	height: 130px;
+	padding-top: 15px;
+	font-size: 14px;
+	background: white;
+	border-bottom: 1px solid #00846C;
+	overflow: scroll;
+}
+.play_help .play_help_item{
+	width: 94%;
+	margin: auto;
+}
+.play_help .play_help_item span:first-child{
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+
 .lot_bet_info{
 	width: 100%;
 	height: 34px;
@@ -24,6 +112,59 @@
 	right: 15px;
 	width: 15px;
 }
+.record_more{
+	width: 100%;
+	position: absolute;
+	top: 38px;
+	height: 139px;
+	background: #a8e8dc;
+	z-index: 6;
+	border-bottom: 1px solid #00846C;
+}
+.record_more .r_m_l{
+	margin-top: 10px;
+}
+.record_more .r_m_l .r_m_i{
+	height: 24px;
+	line-height: 24px;
+}
+.record_more .r_m_l .r_m_i span{
+	display: inline-block;
+	width: 50%;
+	font-size: 14px;
+}
+.record_more .look_more{
+	color: #00846c;
+	margin-top: -10px !important;
+	font-size: 16px;
+}
+
+.qu_wei{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+.qu_wei .qu_wei_item{
+	display: inline-block;
+	width: 35%;
+	text-align: center;
+	height: 36px;
+	border-radius: 5px;
+	line-height: 36px;
+	border:1px solid #C6C6C6;
+	color: #00846C;
+	margin-top: 15px;
+}
+.qu_wei .qu_wei_item:nth-child(2n){
+	margin-left: 10%;
+}
+.qu_wei .qu_wei_item.active{
+	color: white;
+	background: #00846C;
+}
+
+
+
 
 .lot_s_i{
 	padding-top: 10px;
@@ -84,4 +225,99 @@
 .lot_s_i .lot_qiu .lot_qiu_item.active{
 	background: url(../../img/bet/lotBet/qiu.png) no-repeat;
 	color: white;
+}
+
+
+.bet_info{
+	height: 100px;
+	background: #a8e8dc;
+	position: fixed;
+	width: 100%;
+	bottom: 48px;
+	text-align: center;
+	z-index: 2;
+}
+.bet_info .bet_i{
+	height: 26px;
+	line-height: 26px;
+}
+.bet_info .bet_i input{
+	width: 38px;
+	height: 22px;
+	margin-right: 5px;
+}
+.bet_info .bet_i:first-child{
+	margin-top: 10px;
+}
+.bet_info .bet_i .bet_order_number,
+.bet_info .bet_i .bet_order_money{
+	color: #840000;
+	margin: 0 3px;
+}
+.bet_info .bet_i .acc_money{
+	color: #840000;
+}
+
+
+
+.lot_num_input{
+	width: 100%;
+	margin-top: 20px;
+	height: 200px;
+}
+.lot_num_input textarea{
+	height: 200px;
+	display: block;
+	width: 90%;
+	margin: auto;
+	resize: none;
+	outline: none;
+	padding-left: 10px;
+}
+
+
+.menu{
+	text-align: center;
+	border-top: 1px solid #c6c6c6;
+	background: white;
+	padding-top: 4px;
+}
+.menu .menu_i{
+	height: 44px;
+}
+.menu .menu_i img{
+	display: block;
+	margin: auto;
+	width: 24px;
+}
+.menu .menu_i .menu_text{
+	font-size: 12px;
+	margin-top: 3px;
+	color: #000;
+}
+.menu_show{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.menu .menu_i:nth-child(4){
+	position: relative;
+	background: url(../../img/bet/lotBet/qrtz.png) no-repeat;
+	height: 48px;
+	margin-top: -4px;
+}
+.menu .menu_i:nth-child(4) .menu_text{
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	z-index: 2;
+	display: inline-block;
+	width: 100%;
+	left: 0;
+	height: 48px;
+	line-height: 44px;
+	font-size: 14px;
+}
+.menu .menu_i.active .menu_text{
+	color: #00846c;
 }
