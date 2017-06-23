@@ -430,7 +430,13 @@
 				</li>
 			</ul>
 			
-			
+			<div class="radio_sel">
+				<input type="checkbox" name="radio_num_len" value="0" />万位
+				<input type="checkbox" name="radio_num_len" value="0" />千位
+				<input type="checkbox" name="radio_num_len" value="0" />百位
+				<input type="checkbox" name="radio_num_len" value="0" />十位
+				<input type="checkbox" name="radio_num_len" value="0" />个位
+			</div>
 			
 			
 			
@@ -438,9 +444,48 @@
 			
 			
 			<div class="bet_info" style="display: none;">
-				<div class="bet_i">倍数：<input type="number" value="1" min="1" max="99999"/>模式：<select><option>元</option><option>角</option><option>分</option></select></div>
+				<div class="bet_i">倍数：<input class="money_mu" type="number" value="1" min="1" max="99999"/>模式：<div class="money_model">
+					<span data-id="1">元</span><img src="../../img/common/xiala_icon.png" />
+				</div>返点：<div class="repoint_model">
+					<span data-id="false">1800</span><img src="../../img/common/xiala_icon.png" />
+				</div></div>
 				<div class="bet_i">已选<span class="bet_order_number">1</span>,  金额<span class="bet_order_money">2</span>元</div>
 				<div class="bet_i">可用余额<span class="acc_money">￥ 175.24</span></div>
+			</div>
+			<div class="popus_bg" style="display: none;"></div>
+			<div class="popus popus_money_model" style="display: none;">
+				<ul class="p_m_l">
+					<li class="p_m_i active" data-id="1">元<img src="../../img/bet/lotBet/money_sel.png"/></li>
+					<li class="p_m_i" data-id="0.1">角<img src="../../img/bet/lotBet/money_sel.png"/></li>
+					<li class="p_m_i" data-id="0.01">分<img src="../../img/bet/lotBet/money_sel.png"/></li>
+				</ul>
+				<span class="popus_canel">取消</span>
+				<span class="popus_confirm">确定</span>
+			</div>
+			
+			<div class="popus popus_point_model" style="display: none;">
+				<ul class="p_m_l">
+					<li class="p_m_i active"data-id="false">1960<img src="../../img/bet/lotBet/money_sel.png"/></li>
+					<li class="p_m_i" data-id="false">1800<img src="../../img/bet/lotBet/money_sel.png"/></li>
+				</ul>
+				<span class="popus_canel">取消</span>
+				<span class="popus_confirm">确定</span>
+			</div>
+			
+			
+			<div class="popus popus_remind" style="display: none;">
+				<div class="popus_text">余额不足</div>
+				<span class="popus_1_confirm">确定</span>
+			</div>
+			
+			<!--  确认下注  -->
+			<div class="popus confirm_bet" style="display: none;">
+				<span class="c_b_title">确认下注20170508225期</span>
+				<span class="c_b_info">前三直选复式-</span>
+				<span class="c_b_num">总注数：<span>1</span>注</span>
+				<span class="c_b_money">总金额：<span>2</span>元</span>
+				<span class="popus_canel">取消</span>
+				<span class="popus_confirm">确定</span>
 			</div>
 			
 			<div class="menu ui-grid-c" style="visibility: hidden;margin-top: 20px;">
@@ -483,5 +528,54 @@
 		</div>
 		<script type="text/javascript" src="../../js/home/bet/changeLotteryPanel.js" ></script>
 		<script type="text/javascript" src="../../js/home/bet/lotBet.js"></script>
+		<script type="text/javascript" src="../../js/home/bet/xingduole.js" ></script>
+		<script type="text/javascript" src="../../js/home/bet/lotteryNoteCal.js" ></script>
+		<script type="text/javascript" src="../../js/home/bet/inputBetCal.js"></script>
+		<script>
+			var parmater = [
+			{ "lotId":"广东11选5",
+			"lotIntro":"彩种说明：5分钟，10分钟一期，每天120期",
+			"lotInfo":[
+				{"title":"三码","item":[{"title":"三码","info":[{"val":"前三直选复式"},{"val":"前三直选单式"},{"val":"前三组选复式"},{"val":"前三组选单式"},{"val":"前三组选胆拖"}]}]},
+				{"title":"二码","item":[{"title":"二码","info":[{"val":"前二直选复式"},{"val":"前二直选复式"},{"val":"前二直选单式"},{"val":"前二组选复式"},{"val":"前二组选单式"}]}]},
+				{"title":"不定位","item":[{"title":"不定位","info":[{"val":"不定位"}]}]},
+				{"title":"定位胆","item":[{"title":"定位胆","info":[{"val":"定位胆"}]}]},
+				{"title":"趣味型","item":[{"title":"趣味型","info":[{"val":"趣味_定单双"},{"val":"趣味_猜中位"}]}]},
+				{"title":"任选复式","item":[{"title":"任选复式","info":[{"val":"任选一中一"},{"val":"任选二中二"},{"val":"任选三中三"},{"val":"任选四中四"},{"val":"任选五中五"},{"val":"任选六中五"},{"val":"任选七中五"},{"val":"任选八中五"}]}]},
+				{"title":"任选单式","item":[{"title":"任选单式","info":[{"val":"任选一中一"},{"val":"任选二中二"},{"val":"任选三中三"},{"val":"任选四中四"},{"val":"任选五中五"},{"val":"任选六中五"},{"val":"任选七中五"},{"val":"任选八中五"}]}]},
+				{"title":"任选胆拖","item":[{"title":"任选胆拖","info":[{"val":"任选二中二"},{"val":"任选三中三"},{"val":"任选四中四"},{"val":"任选五中五"},{"val":"任选六中五"},{"val":"任选七中五"},{"val":"任选八中五"}]}]}
+			]},
+			
+			{"lotId":"福彩3D",
+			"lotIntro":"彩种说明：5分钟，10分钟一期，每天1200期",
+			"lotInfo":[
+				{"title":"三星","item":[{"title":"三星直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"直选和值"}]},{"title":"三星组选","info":[{"val":"组三复式"},{"val":"组三单式"},{"val":"组六复式"},{"val":"组六单式"},{"val":"混合组选"},{"val":"组选和值"}]}]},
+				{"title":"二星","item":[{"title":"二星直选","info":[{"val":"(前二)直选复式"},{"val":"(前二)直选单式"},{"val":"(后二)直选复式"},{"val":"(后二)直选单式"}]},{"title":"二星组选","info":[{"val":"(前二)组选复式"},{"val":"(前二)组选单式"},{"val":"(后二)组选复式"},{"val":"(后二)组选单式"}]}]},
+				{"title":"定位胆","item":[{"title":"定位胆","info":[{"val":"定位胆"}]}]},
+				{"title":"不定位","item":[{"title":"不定位","info":[{"val":"一码不定位"},{"val":"二码不定位"}]}]},
+				{"title":"大小单双","item":[{"title":"大小单双","info":[{"val":"前二大小单双"},{"val":"后二大小单双"}]}]}
+			]},
+			{"lotId":"重庆时时彩",
+			"lotIntro":"彩种说明：5分钟，10分钟一期，每天1200期",
+			"lotInfo":[
+				{"title":"五星","item":[{"title":"五星直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"五星组合"}]},{"title":"五星组选","info":[{"val":"组选120"},{"val":"组选60"},{"val":"组选30"},{"val":"组选20"},{"val":"组选10"},{"val":"组选5"}]},{"title":"五星特殊","info":[{"val":"一帆风顺"},{"val":"好事成双"},{"val":"三星报喜"},{"val":"四季发财"}]}]},
+				{"title":"四星","item":[{"title":"四星直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"四星组合"}]},{"title":"四星组合","info":[{"val":"组选24"},{"val":"组选12"},{"val":"组选6"},{"val":"组选4"}]}]},
+				{"title":"百家","item":[{"title":"百家","info":[{"val":"重复号"},{"val":"顺子号"},{"val":"单双号"},{"val":"大小号"}]}]},
+				{"title":"后三","item":[{"title":"后三直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"后三组合"},{"val":"直选和值"},{"val":"直选跨度"}]},{"title":"后三组选","info":[{"val":"组三复式"},{"val":"组三单式"},{"val":"组六复式"},{"val":"组六单式"},{"val":"混合组选"},{"val":"组选和值"},{"val":"组选包胆"}]},{"title":"后三其它","info":[{"val":"和值尾数"},{"val":"特殊号"}]}]},
+				{"title":"中三","item":[{"title":"中三直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"中三组合"},{"val":"直选和值"},{"val":"直选跨度"}]},{"title":"中三组选","info":[{"val":"组三复式"},{"val":"组三单式"},{"val":"组六复式"},{"val":"组六单式"},{"val":"混合组选"},{"val":"组选和值"},{"val":"组选包胆"}]},{"title":"中三其它","info":[{"val":"和值尾数"},{"val":"特殊号"}]}]},
+				{"title":"前三","item":[{"title":"前三直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"前三组合"},{"val":"直选和值"},{"val":"直选跨度"}]},{"title":"前三组选","info":[{"val":"组三复式"},{"val":"组三单式"},{"val":"组六复式"},{"val":"组六单式"},{"val":"混合组选"},{"val":"组选和值"},{"val":"组选包胆"}]},{"title":"前三其它","info":[{"val":"和值尾数"},{"val":"特殊号"}]}]},
+				{"title":"后二","item":[{"title":"后二直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"直选和值"},{"val":"直选跨度"}]},{"title":"后二组选","info":[{"val":"组选复式"},{"val":"组选单式"},{"val":"组选和值"},{"val":"组选包胆"}]}]},
+				{"title":"前二","item":[{"title":"前二直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"直选和值"},{"val":"直选跨度"}]},{"title":"前二组选","info":[{"val":"组选复式"},{"val":"组选单式"},{"val":"组选和值"},{"val":"组选包胆"}]}]},
+				{"title":"定位胆","item":[{"title":"定位胆","info":[{"val":"定位胆"}]}]},
+				{"title":"不定位","item":[{"title":"三星","info":[{"val":"后三一码"},{"val":"前三一码"},{"val":"后三二码"},{"val":"前三二码"}]},{"title":"四星","info":[{"val":"四星一码"},{"val":"四星二码"}]},{"title":"五星","info":[{"val":"五星二码"},{"val":"五星三码"}]}]},
+				{"title":"大小单双","item":[{"title":"大小单双","info":[{"val":"前二大小单双"},{"val":"后二大小单双"},{"val":"前三大小单双"},{"val":"后三大小单双"}]}]},
+				{"title":"任选二","item":[{"title":"任二直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"直选和值"}]},{"title":"任二组选","info":[{"val":"组选复式"},{"val":"组选单式"},{"val":"组选和值"}]}]},
+				{"title":"任选三","item":[{"title":"任三直选","info":[{"val":"直选复式"},{"val":"直选单式"},{"val":"直选和值"}]},{"title":"任三组选","info":[{"val":"组三复式"},{"val":"组三单式"},{"val":"组六复式"},{"val":"组六单式"},{"val":"混合组选"},{"val":"组选和值"}]}]},
+				{"title":"任选四","item":[{"title":"任四直选","info":[{"val":"直选复式"},{"val":"直选单式"}]},{"title":"任四组选","info":[{"val":"组选24"},{"val":"组选12"},{"val":"组选6"},{"val":"组选4"}]}]}
+				
+			]}
+		];
+		LogBet.init(parmater);
+		</script>
 	</body>
 </html>

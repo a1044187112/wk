@@ -24,7 +24,7 @@
 		<div data-role="page" id="pageone" style="padding-top: 20px;">
 
 			<ul class="r_info" style="margin-top: 0;">
-				<li class="r_info_i"><span class="r_key">状态：</span><div id="more_sel">
+				<li class="r_info_i"><span class="r_key">状态：</span><div class="more_sel">
 					<span class="more_sel_val">全部</span>
 					<img class="more_sel_icon" src="../../img/common/xiala_icon.png"/>
 					<ul class="more_s" style="display: none;">
@@ -45,8 +45,10 @@
 	<script type="text/javascript" src="../../common/date/date.js" ></script>
 	<script type="text/javascript" src="../../common/common.js" ></script>
 	<script>
-		dateSelect.init();
-		
+		dateSelect.init("#date1","#date2");
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
 	</script>
 
 </html>

@@ -245,6 +245,7 @@
 	width: 38px;
 	height: 22px;
 	margin-right: 5px;
+	text-align: center;
 }
 .bet_info .bet_i:first-child{
 	margin-top: 10px;
@@ -257,7 +258,24 @@
 .bet_info .bet_i .acc_money{
 	color: #840000;
 }
-
+.bet_info .bet_i .repoint_model,
+.bet_info .bet_i .money_model{
+	display: inline-block;
+	width:40px;
+	height: 22px;
+	line-height: 22px;
+	padding-right: 15px;
+	border: 1px solid #C6C6C6;
+	background: white;
+	position: relative;
+}
+.bet_info .bet_i .repoint_model img,
+.bet_info .bet_i .money_model img{
+	position: absolute;
+	right: 3px;
+	top: 8px;
+	width:12px;
+}
 
 
 .lot_num_input{
@@ -274,6 +292,21 @@
 	outline: none;
 	padding-left: 10px;
 }
+
+.radio_sel{
+	width: 100%;
+	font-size: 14px;
+	margin-top: 14px;
+}
+.radio_sel input{
+	margin-left: 10px;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+
 
 
 .menu{
@@ -320,4 +353,119 @@
 }
 .menu .menu_i.active .menu_text{
 	color: #00846c;
+}
+
+
+.popus_bg{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	background: rgba(0,0,0,0.3);
+}
+.popus{
+	width: 250px;
+	position: fixed;
+	z-index: 11;
+	top: 200px;
+	border-radius: 10px;
+}
+.popus_point_model,
+.popus_money_model{
+	padding-top: 35px;
+	font-size: 0;
+}
+.popus_point_model .p_m_l,
+.popus_money_model .p_m_l{
+	border-top: 1px solid #C6C6C6;
+	border-bottom: 1px solid #C6C6C6;
+	padding: 10px 0;
+}
+.popus_point_model .p_m_l .p_m_i,
+.popus_money_model .p_m_l .p_m_i{
+	width: 80%;
+	margin: auto;
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	font-size: 14px;
+}
+.popus_point_model .p_m_l .p_m_i img,
+.popus_money_model .p_m_l .p_m_i img{
+	position: absolute;
+	right: 0;
+	width: 15px;
+	top: 8px;
+	display: none;
+}
+.popus_point_model .p_m_l .p_m_i:first-child img,
+.popus_money_model .p_m_l .p_m_i:first-child img{
+	display: block;
+}
+.popus .popus_confirm,
+.popus .popus_canel{
+	height: 35px;
+	display: inline-block;
+	width: 50%;
+	font-size: 14px;
+	line-height: 35px;
+}
+.popus .popus_confirm{
+	border-left: 1px solid #C6C6C6;
+	border-bottom-right-radius: 10px;
+	margin-left: -1px;
+	color: #00846C;
+}
+.popus .popus_canel{
+	border-bottom-left-radius: 10px;
+	color: #696969;
+}
+
+.popus_remind .popus_1_confirm{
+	display: inline-block;
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	font-size: 14px;
+	color: #000;
+	letter-spacing: 1px;
+}
+.popus_remind .popus_text{
+	height: 120px;
+	line-height: 120px;
+	border-bottom: 1px solid #C6C6C6;
+}
+
+.confirm_bet{
+	font-size: 0;
+}
+.confirm_bet .c_b_title{
+	display: inline-block;
+	height: 69px;
+	line-height: 69px;
+	width: 100%;
+	font-size: 16px;
+	color: #00846C;
+	border-bottom: 1px solid #C6C6C6;
+}
+.confirm_bet .c_b_info{
+	height: 55px;
+	line-height: 55px;
+	border-bottom: 1px solid #C6C6C6;
+	width: 100%;
+	display: inline-block;
+	font-size: 16px;
+}
+.confirm_bet .c_b_num,
+.confirm_bet .c_b_money{
+	display: inline-block;
+	width: 100%;
+	height: 24px;
+	line-height: 21px;
+	font-size: 14px;
+}
+.confirm_bet .c_b_money{
+	border-bottom: 1px solid #C6C6C6;
 }

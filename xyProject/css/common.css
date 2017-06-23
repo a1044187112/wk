@@ -116,7 +116,7 @@ input{
 	border: none;
 	border: 1px solid #C6C6C6;
 }
-#more_sel{
+.more_sel{
 	width: 40%;
 	height: 26px;
 	line-height: 26px;

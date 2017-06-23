@@ -25,7 +25,7 @@
 				<div class="t_m_i ui-block-b">提现记录</div>
 			</div>
 			
-			<div class="wd_more">
+			<div class="wd_more modify_1">
 				<ul class="wd_l">
 					<li class="wd_l_i"><span>可提现金额：</span><span>￥100.20</span></li>
 					<li class="wd_l_i"><span>收款银行卡：</span><select><option>工商银行|卡号后四位0236</option></select></li>
@@ -42,7 +42,7 @@
 			
 			
 			
-			<div class="re_more">
+			<div class="re_more modify_2" style="display: none;">
 				<ul class="r_info">
 					<li class="r_info_i"><span class="r_key">开始时间：</span><input class="r_val" type="text"/></li>
 					<li class="r_info_i"><span class="r_key">结束时间：</span><input class="r_val" type="text"/></li>
@@ -53,4 +53,24 @@
 			</div>
 		</div>
 	</body>
+	<script>
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
+		function addEvent(){
+			$(".team_menu .t_m_i").click(function(){
+				var index = $(this).index(".team_menu .t_m_i");
+				$(".team_menu .t_m_i").removeClass("active");
+				$(this).addClass("active");
+				switch (index){
+					case 0: $(".modify_1").css("display","block"); $(".modify_2").css("display","none");
+						break;
+					case 1: $(".modify_1").css("display","none"); $(".modify_2").css("display","block");
+						break;
+				}
+			});
+		}
+		
+		addEvent();
+	</script>
 </html>

@@ -1,5 +1,6 @@
 body{
 	background: #F2F2F2;
+	padding-bottom: 30px;
 }
 .fp{
 	width: 100%;
@@ -47,8 +48,8 @@ body{
 .mc_item .mc_item_i{
 	background: white;
 	margin-bottom: 3px;
-	height: 30px;
-	line-height: 30px;
+	height: 40px;
+	line-height: 40px;
 	display: block;
 	color: black;
 }

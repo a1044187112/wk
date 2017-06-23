@@ -75,7 +75,7 @@
 				<div class="t_m_i ui-block-c">游戏类</div>
 			</div>
 			
-			<ul class="r_info_i">
+			<ul class="r_info_i modify_1">
 				<li class="r_i_i"><span>总团队人数</span><span>test</span></li>
 				<li class="r_i_i"><span>时间范围内注册人数</span><span>0</span></li>
 				<li class="r_i_i"><span>充值</span><span>0</span></li>
@@ -90,7 +90,7 @@
 			</ul>
 			
 			<!-- 彩票类  -->
-			<ul class="r_info_i">
+			<ul class="r_info_i modify_2" style="display: none;">
 				<li class="r_i_i"><span></span><span>销售/中奖</span></li>
 				<li class="r_i_i"><span>秒秒彩</span><span>0/0</span></li>
 				<li class="r_i_i"><span>充值</span><span>0/0</span></li>
@@ -105,7 +105,7 @@
 			</ul>
 			
 			<!-- 游戏类  -->
-			<ul class="r_info_i">
+			<ul class="r_info_i modify_3" style="display: none;">
 				<li class="r_i_i"><span></span><span>销售/中奖</span></li>
 				<li class="r_i_i"><span>老虎机</span><span>0/0</span></li>
 				<li class="r_i_i"><span>刮刮乐</span><span>0/0</span></li>
@@ -125,4 +125,27 @@
 			
 		</div>
 	</body>
+	<script>
+	
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
+		function addEvent(){
+			$(".team_menu .t_m_i").click(function(){
+				var index = $(this).index(".team_menu .t_m_i");
+				$(".team_menu .t_m_i").removeClass("active");
+				$(this).addClass("active");
+				switch (index){
+					case 0: $(".modify_1").css("display","block"); $(".modify_2").css("display","none");  $(".modify_3").css("display","none");
+						break;
+					case 1:  $(".modify_1").css("display","none"); $(".modify_2").css("display","none");  $(".modify_2").css("display","block");
+						break;
+					case 2:$(".modify_1").css("display","none"); $(".modify_3").css("display","block");  $(".modify_2").css("display","none");
+					break;
+				}
+			});
+		}
+		
+		addEvent();
+	</script>
 </html>

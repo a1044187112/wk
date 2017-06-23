@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="../../common/jquery/jquery-1.11.3.min.js" ></script>
 		<link rel="stylesheet" href="../../css/common.css" />
 		<link rel="stylesheet" href="../../css/memberCenter/recharge.css" />
+		<link rel="stylesheet" href="../../common/date/date.css" />
 		<title>开奖记录</title>
 	</head>
 	<body>
@@ -27,20 +28,34 @@
 			
 			<div class="modify_1">
 				<ul class="r_info">
-					<li class="r_info_i"><span class="r_key">开始时间：</span><input class="r_val" type="text"/></li>
-					<li class="r_info_i"><span class="r_key">结束时间：</span><input class="r_val" type="text"/></li>
-					<li class="r_info_i"><span class="r_key">状态：</span><select><option>全部</option></select></li>
-					<li class="r_info_i"><span class="r_key">游戏种类：</span><select><option>全部</option></select></li>
+					<li class="r_info_i"><span class="r_key">开始时间：</span><input id="date1" class="r_val date1" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">结束时间：</span><input id="date2" class="r_val date2" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">状态：</span><div class="more_sel">
+					<span class="more_sel_val">全部</span>
+					<img class="more_sel_icon" src="../../img/common/xiala_icon.png"/>
+					<ul class="more_s" style="display: none;">
+						<li class="more_s_i"><span>充值</span></li>
+						<li class="more_s_i"><span>投注</span></li>
+					</ul>
+				</div></li>
+					<li class="r_info_i"><span class="r_key">游戏种类：</span><div class="more_sel">
+					<span class="more_sel_val">全部</span>
+					<img class="more_sel_icon" src="../../img/common/xiala_icon.png"/>
+					<ul class="more_s" style="display: none;">
+						<li class="more_s_i"><span>充值</span></li>
+						<li class="more_s_i"><span>投注</span></li>
+					</ul>
+				</div></li>
 					<li class="r_info_i"><span class="r_key">注单编号：</span><input class="r_val" type="text"/></li>
 				</ul>
 				
 				<a href="gameRecordList.html" class="submit">查询</a>
 			</div>
 			
-			<div class="modify_2">
+			<div class="modify_2" style="display: none;">
 				<ul class="r_info">
-					<li class="r_info_i"><span class="r_key">开始时间：</span><input class="r_val" type="text"/></li>
-					<li class="r_info_i"><span class="r_key">结束时间：</span><input class="r_val" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">开始时间：</span><input id="date3" class="r_val date1" type="text"/></li>
+					<li class="r_info_i"><span class="r_key">结束时间：</span><input id="date4" class="r_val date2" type="text"/></li>
 					<li class="r_info_i"><span class="r_key">注单编号：</span><input class="r_val" type="text"/></li>
 				</ul>
 				
@@ -48,4 +63,27 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="../../common/date/date.js" ></script>
+	<script type="text/javascript" src="../../common/common.js" ></script>
+	<script>
+		dateSelect.init(".date1",".date2");
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
+		function addEvent(){
+			$(".team_menu .t_m_i").click(function(){
+				var index = $(this).index(".team_menu .t_m_i");
+				$(".team_menu .t_m_i").removeClass("active");
+				$(this).addClass("active");
+				switch (index){
+					case 0: $(".modify_1").css("display","block"); $(".modify_2").css("display","none");
+						break;
+					case 1: $(".modify_1").css("display","none"); $(".modify_2").css("display","block");
+						break;
+				}
+			});
+		}
+		
+		addEvent();
+	</script>
 </html>

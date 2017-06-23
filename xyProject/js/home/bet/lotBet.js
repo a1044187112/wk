@@ -1,22 +1,22 @@
 
 // 获取页面数据  加载到页面上
 var getJson = {
-	init: function() {
-		this.getUrlId(); // 获取地址栏的彩票id
+	init: function(parmater) {
+		this.getUrlId(parmater); // 获取地址栏的彩票id
 	},
-	getUrlId: function() {
+	getUrlId: function(parmater) {
 		var url = window.location.href;
 		var urlArr = url.split("?");
 		getJson.lotId = decodeURI(urlArr[1]);
 		
 		
 		$(".lot_class_name").html(getJson.lotId); // 更换当前显示的彩票名字
-		this.initLotData(); // load  json 数据
+		this.initLotData(parmater); // load  json 数据
 	},
-	initLotData: function() {
-		$.get("lotData.json", function(data) {
-			getJson.anDataLoad(data);
-		});
+	initLotData: function(parmater) {
+//		$.get("lotData.json", function(data) {
+			getJson.anDataLoad(parmater);
+//		});
 	},
 
 	anDataLoad: function(data) { // 解析json  数据
@@ -43,7 +43,9 @@ var getJson = {
 		});
 		$(".menu_type .m_t_1").html(_html);
 		// 添加代码之后 默认促发彩票下星号的第一个的点击事件
-		$(".menu_type .m_t_1 .m_t_1_i:first-child").trigger("click");
+		setTimeout(function(){
+			$(".menu_type .m_t_1 .m_t_1_i:first-child").trigger("click");
+		},100);
 	},
 
 	lotPanelIsShow: function(id) {
@@ -59,8 +61,9 @@ var getJson = {
 };
 
 var LogBet = {
-	init : function(){
-		getJson.init();
+	init : function(parmater){
+		LogBet.parmater = parmater;
+		getJson.init(LogBet.parmater);
 		
 		this.addEvent();
 	},
@@ -131,6 +134,7 @@ var LogBet = {
 		// 全 大 小 奇 偶 清
 		$(".lot_quick_item").click(function(){
 			LogBet.method.lotTextClick($(this));
+			lotteryNoteCal.init();
 		});
 		
 		//  彩票球点击事件
@@ -139,6 +143,7 @@ var LogBet = {
 				$(this).removeClass("active");
 			else
 				$(this).addClass("active");
+			lotteryNoteCal.init();
 		});
 		
 		// 趣味型点击事件
@@ -147,13 +152,78 @@ var LogBet = {
 				$(this).removeClass("active");
 			else
 				$(this).addClass("active");
+			lotteryNoteCal.init();
 		});
 		
+		// 倍数框点击事件
+		$(".money_model").click(function(){
+			LogBet.method.popusInit($(".popus_money_model"));
+		});
+		// 倍数框选择下注模式点击
+		$(".popus_money_model .p_m_i").click(function(){
+			$(".popus_money_model .p_m_i img").css("display","none");
+			$(this).find("img").css("display","block");
+			$(".popus_money_model .p_m_i").removeClass("active");
+			$(this).addClass("active");
+		});
+		// 倍数框取消按钮
+		$(".popus_money_model .popus_canel").click(function(){
+			LogBet.method.popusClose($(".popus_money_model"));
+		});
+		$(".popus_money_model .popus_confirm").click(function(){
+			$(".money_model span").attr("data-id",$(".popus_money_model .p_m_i.active").attr("data-id"));
+			$(".money_model span").text($(".popus_money_model .p_m_i.active").text());
+			
+			LogBet.method.popusClose($(".popus_money_model"));
+			
+			lotteryNoteCal.setPanelInfossc(parseInt($(".bet_order_number").text()));
+		});
 		
+		// 倍数框值改变事件
+		$(".bet_info .money_mu").change(function(){
+			lotteryNoteCal.setPanelInfossc(parseInt($(".bet_order_number").text()));
+		});
+		
+		// 返点点击按钮
+		$(".repoint_model").click(function(){
+			LogBet.method.popusInit($(".popus_point_model"));
+		});
+		// 返点选项点击按钮
+		$(".popus_point_model .p_m_i").click(function(){
+			$(".popus_point_model .p_m_i img").css("display","none");
+			$(this).find("img").css("display","block");
+			$(".popus_point_model .p_m_i").removeClass("active");
+			$(this).addClass("active");
+		});
+		// 返点取消按钮
+		$(".popus_point_model .popus_canel").click(function(){
+			LogBet.method.popusClose($(".popus_point_model"));
+		});
+		// 返点确认按钮
+		$(".popus_point_model .popus_confirm").click(function(){
+			$(".repoint_model span").attr("data-id",$(".popus_point_model .p_m_i.active").attr("data-id"));
+			$(".repoint_model span").text($(".popus_point_model .p_m_i.active").text());
+			
+			LogBet.method.popusClose($(".popus_point_model"));
+			
+		});
 		
 		
 	},
 	method: {
+		popusInit : function($obj){
+			var height = document.body.scrollHeight;
+			$(".popus_bg").css("height",height).css("display","block");
+			var width = parseInt($("body").css("width"));
+			var popusWidth = parseInt($obj.css("width"));
+			$obj.css("left",(width-popusWidth)/2 + "px").css("display","block");
+		},
+		
+		popusClose : function($obj){
+			$(".popus_bg").css("display","none");
+			$obj.css("display","none");
+		},
+		
 		getModelClass: function(data) {
 			var dataArr = data.split("|");
 			var _html = "";
@@ -255,4 +325,4 @@ var LogBet = {
 	},
 };
 
-LogBet.init();
+

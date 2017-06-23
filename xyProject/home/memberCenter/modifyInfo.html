@@ -35,7 +35,7 @@
 				<a href="rechargeInfo.html" class="submit">修改</a>
 			</div>
 			
-			<div class="modify_2">
+			<div class="modify_2" style="display: none;">
 				<ul class="r_info">
 					<li class="r_info_i"><span class="r_key">旧资金密码：</span><input class="r_val" type="text"/></li>
 					<li class="r_info_i"><span class="r_key">新资金密码：</span><input class="r_val" type="text"/></li>
@@ -46,4 +46,25 @@
 			</div>
 		</div>
 	</body>
+	<script>
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
+		
+		function addEvent(){
+			$(".team_menu .t_m_i").click(function(){
+				var index = $(this).index(".team_menu .t_m_i");
+				$(".team_menu .t_m_i").removeClass("active");
+				$(this).addClass("active");
+				switch (index){
+					case 0: $(".modify_1").css("display","block"); $(".modify_2").css("display","none");
+						break;
+					case 1: $(".modify_1").css("display","none"); $(".modify_2").css("display","block");
+						break;
+				}
+			});
+		}
+		
+		addEvent();
+	</script>
 </html>

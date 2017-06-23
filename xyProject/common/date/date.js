@@ -1,5 +1,8 @@
 var dateSelect  = {
-	init :function(){
+	init :function(id1,id2){
+		dateSelect.id1 = id1;
+		dateSelect.id2 = id2;
+		
 		this.initDom();
 		this.initInput();
 		this.initDate();
@@ -73,10 +76,10 @@ var dateSelect  = {
 			moth = "0"+moth;
 			if(day<10)
 				day = "0"+day;
-			$("#"+$(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
+			$($(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
 			$(".date_f").css("display","none");
-			if("#"+$(".date_f").attr("data-id")=="#date1")
-				$("#date2").trigger("focus");
+			if($(".date_f").attr("data-id")==dateSelect.id1)
+				$(dateSelect.id2).trigger("focus");
 		});
 		//本月
 		$("body").delegate("#date_table .moth_this","click",function(){ 
@@ -87,10 +90,10 @@ var dateSelect  = {
 			moth = "0"+moth;
 			if(day<10)
 				day = "0"+day;
-			$("#"+$(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
+			$($(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
 			$(".date_f").css("display","none");
-			if("#"+$(".date_f").attr("data-id")=="#date1")
-				$("#date2").trigger("focus");
+			if($(".date_f").attr("data-id")==dateSelect.id1)
+				$(dateSelect.id2).trigger("focus");
 		});
 		// 下月
 		$("body").delegate("#date_table .moth_new","click",function(){ 
@@ -107,21 +110,21 @@ var dateSelect  = {
 			moth = "0"+moth;
 			if(day<10)
 				day = "0"+day;
-			$("#"+$(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
+			$($(".date_f").attr("data-id")).val(year+'-'+moth+'-'+day);
 			$(".date_f").css("display","none");
-			if("#"+$(".date_f").attr("data-id")=="#date1")   // 如果当期选中的是date1的  选完之后让date2获取焦点
-				$("#date2").trigger("focus");
+			if($(".date_f").attr("data-id")==dateSelect.id1)   // 如果当期选中的是date1的  选完之后让date2获取焦点
+				$(dateSelect.id2).trigger("focus");
 		});
 		
-		$("#date1").focus(function(){
+		$(dateSelect.id1).focus(function(){
 			dateSelect.setDatePopusPosition($(this));
-			$(".date_f").attr("data-id","date1");
+			$(".date_f").attr("data-id",dateSelect.id1);
 			$(".date_f").css("display","block");
 		});
 		
-		$("#date2").focus(function(){
+		$(dateSelect.id2).focus(function(){
 			dateSelect.setDatePopusPosition($(this));
-			$(".date_f").attr("data-id","date2");
+			$(".date_f").attr("data-id",dateSelect.id2);
 			$(".date_f").css("display","block");
 		});
 		
@@ -234,7 +237,7 @@ var dateSelect  = {
 			moth = "0"+moth;
 		if(day<10)
 			day = "0"+day;
-		$("#date2").val(year+"-"+moth+"-"+day);
+		$(dateSelect.id2).val(year+"-"+moth+"-"+day);
 		if(day==1){
 			if(moth==1){
 				day = dateSelect.getMonthDayNum(year-1,12); // 获取当月天数
@@ -246,7 +249,6 @@ var dateSelect  = {
 		}else{
 			day = day - 1;
 		}
-		$("#date1").val(year+"-"+moth+"-"+day);
-		
+		$(dateSelect.id1).val(year+"-"+moth+"-"+day);
 	},
 };

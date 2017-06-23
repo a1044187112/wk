@@ -126,7 +126,7 @@
 				<div class="t_m_i ui-block-c">配额查询</div>
 			</div>
 			
-			<ul class="table">
+			<ul class="table modify_1">
 				<li class="table_i">
 					<span>级别</span>
 					<span>总配额数</span>
@@ -135,7 +135,7 @@
 				</li>
 			</ul>
 			
-			<div class="more">
+			<div class="more modify_2" style="display: none;">
 				<ul class="r_info">
 					<li class="r_info_i"><span class="r_key">开始时间：</span><input class="r_val" type="text"/></li>
 					<li class="r_info_i"><span class="r_key">结束时间：</span><input class="r_val" type="text"/></li>
@@ -147,4 +147,26 @@
 			</div>
 		</div>
 	</body>
+	<script>
+	// 返回按钮
+		$(".return_img").click(function(){ window.history.back();  }); 
+		$(".return_text").click(function(){ window.history.back();  });
+		function addEvent(){
+			$(".team_menu .t_m_i").click(function(){
+				var index = $(this).index(".team_menu .t_m_i");
+				$(".team_menu .t_m_i").removeClass("active");
+				$(this).addClass("active");
+				switch (index){
+					case 0: $(".modify_1").css("display","block"); $(".modify_2").css("display","none");
+						break;
+					case 1:  $(".modify_1").css("display","block"); $(".modify_2").css("display","none");
+						break;
+					case 2:$(".modify_1").css("display","none"); $(".modify_2").css("display","block");
+					break;
+				}
+			});
+		}
+		
+		addEvent();
+	</script>
 </html>

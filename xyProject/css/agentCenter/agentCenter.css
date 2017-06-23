@@ -1,9 +1,9 @@
 .item{
-	height: 40px;
+	height: 45px;
 	border-bottom: 2px solid #F1F1F1;
 	font-size: 16px;
 	position: relative;
-	line-height: 40px;
+	line-height: 45px;
 }
 .item>img:first-child{
 	width: 30px;
