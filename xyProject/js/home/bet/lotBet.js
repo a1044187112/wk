@@ -66,6 +66,13 @@ var LogBet = {
 		getJson.init(LogBet.parmater);
 		
 		this.addEvent();
+		
+		
+		// 如果屏幕宽度大于768
+		var w = window.screen.width;
+		if(w>=768){
+			$("body").find("br").remove();;
+		}
 	},
 	
 	addEvent : function(){

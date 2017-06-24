@@ -336,6 +336,7 @@
 .menu .menu_i:nth-child(4){
 	position: relative;
 	background: url(../../img/bet/lotBet/qrtz.png) no-repeat;
+	background-size: cover;
 	height: 48px;
 	margin-top: -4px;
 }

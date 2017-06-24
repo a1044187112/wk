@@ -13,28 +13,59 @@
 		<title>登录</title>
 	</head>
 	<body>
-		<div class="title">登陆</div>
+		<div class="title" style="background: #2d7a79;">登陆</div>
 		<div class="weclome">Welcome</div>
 		<div class="div_input"><img src="img/login/icon2.png"/><input type="text" placeholder="登录账户"/></div>	
 		<div class="div_input"><img src="img/login/icon1.png"/><input type="text" placeholder="密码"/></div>	
 		<div class="div_input_i"><span class="div_span_icon"><span></span></span><span class="remeber_icon">记住密码</span><span class="faile_pwd">忘记密码？</span></div>	
 		<button class="login">立即登录</button>
 		<span class="more">点击获取二维码</span>
-		<div class="more_m">
-			<div class="more_m_i">
-				<img />
+		<div class="more_m ui-grid-a">
+			<div class="more_m_i ui-block-a">
+				<img src="img/login/android.png" />
 				android
 			</div>
-			<div class="more_m_i">
+			<div class="more_m_i ui-block-b">
 				<img />
 				ios
 			</div>
 		</div>
-
+		
 		<div class="popus_bg" style="display: none;"></div>
 		<div class="popus" style="display: none;">
 			<div class="popus_text">密码错误，请重新输入</div>
 			<button class="popus_btn">确认</button>
 		</div>
+		
+		<div class="fade_img">
+			<img src="img/login/fade.png"/>
+			<span>兴原娱乐 @2017 v1.0</span>
+		</div>
 	</body>
+<script>
+	function addEvent(){
+		$(".more").click(function(){
+			if($(this).hasClass("active")){
+				$(".more_m").css("display","none");
+				$(this).removeClass("active");
+				$(".more").text("点击显示二维码");
+			}else{
+				$(".more_m").css("display","block");
+				$(this).addClass("active");
+				$(".more").text("关闭二维码");
+			}
+		});
+		
+		setTimeout(function(){
+			$(".fade_img").css("display","none");
+		},2000);
+		
+		
+		$(".login").click(function(){
+			window.location.href = "index.html";
+		});
+	}
+	
+	addEvent();
+</script>
 </html>
